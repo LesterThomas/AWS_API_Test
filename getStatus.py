@@ -23,7 +23,7 @@ for reservation in response["Reservations"]:
 		# This sample print will output entire Dictionary object
 		#print(instance)
 		# This will print will output the value of the Dictionary key 'InstanceId'
-		print(instance["InstanceId"],instance["InstanceType"],instance["State"]["Name"])
+		print(instance["InstanceId"],instance["InstanceType"],instance["State"]["Name"],instance["PrivateIpAddress"])
 		if (instance["State"]["Name"]=="stopped"):
 			instances.append(instance["InstanceId"])
 			
